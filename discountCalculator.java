@@ -9,13 +9,13 @@ class Calculator {
     public void add() {
         try {
             BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter the Name : ");
+            System.out.print("Enter the Name : ");
             name = buffer.readLine();
 
-            System.out.println("Enter the Quantity : ");
+            System.out.print("Enter the Quantity : ");
             qty = Integer.parseInt(buffer.readLine());
 
-            System.out.println("Enter the Price : ");
+            System.out.print("Enter the Price : ");
             price = Float.parseFloat(buffer.readLine());
 
             // Fixed validation: Check if they are non-positive
@@ -46,7 +46,7 @@ public class discountCalculator {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         int itemCount = 0;
         
-        System.out.println("How many items you're billing (Max 10) : ");
+        System.out.print("How many items you're billing (Max 10) : ");
         itemCount = Integer.parseInt(buffer.readLine());
 
         if (itemCount > 10 || itemCount <= 0) {
@@ -63,7 +63,7 @@ public class discountCalculator {
 
         float totalBill = 0;
         for (int i = 0; i < itemCount; i++) {
-            dc[i].display();
+            dc[i].display();    
             totalBill += dc[i].subTotal;
         }
 
@@ -83,6 +83,6 @@ public class discountCalculator {
         System.out.println("Overall Grand Total : " + totalBill);
         System.out.println("Discount Applied    : " + discountAmount); // <--- Added this line
         System.out.println("Final Total         : " + finalTotal);
-        System.out.println("====================");
+        System.out.println("===================="); 
     }
 }
