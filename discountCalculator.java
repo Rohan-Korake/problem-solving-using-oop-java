@@ -39,6 +39,7 @@ class Calculator {
         System.out.println("Item Price    : " + price);
         System.out.println("Subtotal      : " + subTotal);
     }
+    
 }
 
 public class discountCalculator {
