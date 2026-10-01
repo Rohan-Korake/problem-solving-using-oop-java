@@ -1,3 +1,10 @@
+// A neighborhood retail store wants a simple Billing and Discount Calculator. The system should accept the quantity and unit price of up to 10 items purchased by a customer using arrays, compute the total bill using loops, and apply tiered discount rules using control statements (e.g., 5% discount on bills above ₹2000, 10% above ₹5000). The program should also flag and skip any item with an invalid (negative or zero) quantity or price, and display an itemized bill along with the final payable amount.
+// Assignment: Write a Java program that:
+// 1.⁠ ⁠Accepts item names, quantities, and prices into arrays.
+// 2.⁠ ⁠Uses looping constructs to compute the subtotal for each item and the grand total.
+// 3.⁠ ⁠Uses control statements (if-else / switch) to apply discount slabs based on the total.
+// 4.⁠ ⁠Validates each entry and skips invalid records with an appropriate message
+
 import java.io.*;
 
 class Calculator {
@@ -39,14 +46,14 @@ class Calculator {
         System.out.println("Item Price    : " + price);
         System.out.println("Subtotal      : " + subTotal);
     }
-    
+
 }
 
 public class discountCalculator {
     public static void main(String args[]) throws IOException {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         int itemCount = 0;
-        
+
         System.out.print("How many items you're billing (Max 10) : ");
         itemCount = Integer.parseInt(buffer.readLine());
 
@@ -64,19 +71,19 @@ public class discountCalculator {
 
         float totalBill = 0;
         for (int i = 0; i < itemCount; i++) {
-            dc[i].display();    
+            dc[i].display();
             totalBill += dc[i].subTotal;
         }
 
-       // Calculate overall discount based on the aggregate total bill
+        // Calculate overall discount based on the aggregate total bill
         float discountAmount = 0;
         float finalTotal = totalBill;
-        
+
         if (totalBill > 5000) {
             discountAmount = totalBill * 10 / 100; // 10% discount
             finalTotal = totalBill - discountAmount;
         } else if (totalBill > 2000) {
-            discountAmount = totalBill * 5 / 100;  // 5% discount
+            discountAmount = totalBill * 5 / 100; // 5% discount
             finalTotal = totalBill - discountAmount;
         }
 
@@ -84,6 +91,6 @@ public class discountCalculator {
         System.out.println("Overall Grand Total : " + totalBill);
         System.out.println("Discount Applied    : " + discountAmount); // <--- Added this line
         System.out.println("Final Total         : " + finalTotal);
-        System.out.println("===================="); 
+        System.out.println("====================");
     }
 }

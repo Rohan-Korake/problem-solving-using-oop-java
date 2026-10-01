@@ -1,3 +1,10 @@
+// Problem Statement: A college library wants to digitize its catalog through a Library Management System. Each book should be represented as an object with attributes like title, author, ISBN, and availability status. The system must support adding books via constructors, updating book information through methods, and quickly filtering/sorting the catalog (e.g., listing all available books, or books by a specific author) using lambda expressions.
+// Assignment: Write a Java program that:
+// 1.⁠ ⁠Creates a Book class with member variables (title, author, ISBN, availability, publication year).
+// 2.⁠ ⁠Defines methods to issue and return a book, updating its availability status.
+// 3.⁠ ⁠Defines parameterized and default constructors to create book objects, passing book details as arguments.
+// 4.⁠ ⁠Uses lambda expressions (with functional interfaces / Comparator) to filter available books and sort the catalog by publication year or title.
+
 import java.io.*;
 
 class LMS {
